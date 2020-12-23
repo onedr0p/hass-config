@@ -1,0 +1,13 @@
+---
+
+# platform: mqtt
+# name: "Car Garage Door - MQTT"
+# command_topic: "Car Garage Door/IN/STATE"
+# state_topic: "Car Garage Door/OUT/STATE"
+# payload_open: "open"
+# payload_close: "close"
+# payload_available: "online"
+# state_open: "OPEN"
+# state_closed: "CLOSED"
+# device_class: "garage"
+# unique_id: "0xa4cf12de93df_opengarage"

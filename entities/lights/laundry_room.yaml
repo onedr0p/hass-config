@@ -1,0 +1,7 @@
+---
+
+platform: group
+name: Laundry Room
+entities:
+- light.laundry_room_1
+- light.laundry_room_2

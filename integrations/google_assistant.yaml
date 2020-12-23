@@ -1,0 +1,11 @@
+---
+# The google_assistant integration allows you to control things via Google Assistant on your mobile, tablet or Google Home device.
+#
+# https://www.home-assistant.io/components/google_assistant/
+#
+
+google_assistant:
+  project_id: !env_var HASS_SECRET_GOOGLE_PROJECT_ID
+  secure_devices_pin: !env_var HASS_SECRET_GOOGLE_SECURE_DEVICES_PIN
+  service_account: !include ../google_service_account.json
+  report_state: true

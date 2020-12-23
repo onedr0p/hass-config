@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290012607.html
+
+platform: "mqtt"
+name: Basement - Lux
+
+state_topic: "zigbee2mqtt/Basement Motion Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "lx"
+value_template: "{{ value_json.illuminance_lux }}"
+device_class: "illuminance"
+
+unique_id: 9290012607_0x001788010211e828_lux_zigbee2mqtt

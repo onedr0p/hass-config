@@ -1,0 +1,11 @@
+---
+
+alias: Turn on master bedroom closet light when there is movement
+trigger:
+- platform: state
+  entity_id: binary_sensor.master_bedroom_closet_occupancy
+  to: 'on'
+action:
+- service: light.turn_on
+  entity_id: light.master_bedroom_closet
+

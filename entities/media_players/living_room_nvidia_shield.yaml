@@ -1,0 +1,37 @@
+---
+# The androidtv platform allows you to control an Android TV device or 
+# Amazon Fire TV device.
+#
+# https://www.home-assistant.io/integrations/androidtv/
+#
+
+platform: androidtv
+name: Living Room - Nvidia Shield
+host: 192.168.150.21
+port: 5555
+apps:
+    com.android.tv.settings: "Settings"
+    com.plexapp.android: "Plex"
+    com.amazon.avod: "Amazon Prime"
+state_detection_rules:
+    'com.android.tv.settings':
+      - 'idle'
+    'com.android.vending':
+      - 'idle'
+    'com.plexapp.android':
+      - 'paused':
+          'media_session_state': 3  # this indentation is important!
+          'wake_lock_size': 1       # this indentation is important!
+      - 'playing':
+          'media_session_state': 3  # this indentation is important!
+      - 'standby'
+    'com.amazon.avod':
+      - 'playing':
+          'wake_lock_size': 4  # this indentation is important!
+      - 'playing':
+          'wake_lock_size': 3  # this indentation is important!
+      - 'paused':
+          'wake_lock_size': 2  # this indentation is important!
+      - 'paused':
+          'wake_lock_size': 1  # this indentation is important!
+      - 'idle'

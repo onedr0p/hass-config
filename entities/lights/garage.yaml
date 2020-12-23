@@ -1,0 +1,6 @@
+---
+
+platform: group
+name: Garage
+entities:
+- light.garage_ceiling

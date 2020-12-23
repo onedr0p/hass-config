@@ -1,0 +1,11 @@
+---
+
+# platform: traccar
+# host: traccar
+# port: 8082
+# ssl: false
+# verify_ssl: false
+# username: !secret traccar_username
+# password: !secret traccar_password
+# event:
+# - all_events

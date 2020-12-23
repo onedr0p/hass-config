@@ -1,0 +1,10 @@
+---
+
+platform: group
+name: Basement
+entities:
+- light.basement_ceiling_1
+- light.basement_ceiling_2
+- light.basement_ceiling_3
+- light.basement_ceiling_4
+- light.basement_ceiling_5

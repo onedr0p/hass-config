@@ -1,0 +1,15 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/MCCGQ11LM.html
+
+platform: "mqtt"
+name: Basement Door - State
+
+state_topic: "zigbee2mqtt/Basement Door Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+value_template: "{{ value_json.contact }}"
+payload_on: false
+payload_off: true
+device_class: "door"
+
+unique_id: MCCGQ11LM_0x00158d0002a2318e_door_sensor_zigbee2mqtt

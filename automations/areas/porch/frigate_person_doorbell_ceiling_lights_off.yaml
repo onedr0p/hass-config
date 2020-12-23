@@ -1,0 +1,17 @@
+---
+
+alias: Turn off Porch lights when Person is not detected after 10PM
+trigger: 
+  platform: state
+  entity_id: binary_sensor.doorbell_person
+  from: 'on'
+  to: 'off'
+  for:
+    minutes: 5
+condition:
+  condition: time
+  after: "22:00:00"
+action:
+- service: light.turn_off
+  entity_id:
+  - light.porch

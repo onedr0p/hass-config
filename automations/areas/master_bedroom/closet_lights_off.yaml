@@ -1,0 +1,12 @@
+---
+
+alias: Turn off master bedroom closet light 2 minute after last movement
+trigger:
+- platform: state
+  entity_id: binary_sensor.master_bedroom_closet_occupancy
+  to: 'off'
+  for:
+    minutes: 2
+action:
+- service: light.turn_off
+  entity_id: light.master_bedroom_closet

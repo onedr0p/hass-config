@@ -1,0 +1,18 @@
+---
+
+platform: template
+sensors:
+  garage_car_presence:
+    friendly_name: 'Garage Car Presence'
+    value_template: |
+      {% if states.cover.car_garage_door %}
+        {% if states.cover.car_garage_door.state == "open" %}
+          n/a
+        {% elif ((states.cover.car_garage_door.attributes["distance_sensor"] > 90) and (states.cover.car_garage_door.attributes["distance_sensor"] < 180)) %}
+          Yes
+        {% else %}
+          No
+        {% endif %}
+      {% else %}
+        n/a
+      {% endif %}

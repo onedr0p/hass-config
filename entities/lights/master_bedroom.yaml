@@ -1,0 +1,6 @@
+---
+
+platform: group
+name: Master Bedroom
+entities:
+- light.master_bedroom_closet

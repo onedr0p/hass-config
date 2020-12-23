@@ -1,0 +1,12 @@
+---
+
+platform: "mqtt"
+name: House Garage Door - State
+
+state_topic: "zwave2mqtt/foyer/house-garage-door/48/1/0"
+value_template: "{{ value_json.value }}"
+payload_on: true
+payload_off: false
+device_class: "door"
+
+unique_id: ecolink_330_2_4_8_door_sensor_zwave2mqtt

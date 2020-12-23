@@ -1,0 +1,26 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290012573A.html
+
+platform: "mqtt"
+name: "Garage Door 2"
+
+state_topic: "zigbee2mqtt/Garage Door Light 2"
+availability_topic: "zigbee2mqtt/bridge/state"
+brightness: true
+color_temp: true
+xy: true
+hs: false
+schema: "json"
+command_topic: "zigbee2mqtt/Garage Door Light 2/set"
+brightness_scale: 254
+effect: true
+effect_list: 
+- "blink"
+- "breathe"
+- "okay"
+- "channel_change"
+- "finish_effect"
+- "stop_effect"
+
+unique_id: "9290012573A_0x0017880104e1063f_zigbee2mqtt"

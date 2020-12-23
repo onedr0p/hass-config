@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/WSDCGQ11LM.html
+
+platform: "mqtt"
+name: Master Bedroom Bathroom Multi-Sensor - Pressure
+
+state_topic: "zigbee2mqtt/Master Bedroom Bathroom Multi-Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "hPa"
+value_template: "{{ value_json.pressure }}"
+device_class: "pressure"
+
+unique_id: WSDCGQ11LM_0x00158d00056e4a65_pressure_zigbee2mqtt

@@ -1,0 +1,14 @@
+---
+
+alias: Turn off laundry room light 5 minute after last movement
+trigger:
+- platform: state
+  entity_id: binary_sensor.laundry_room_occupancy
+  to: 'off'
+  for:
+    minutes: 5
+action:
+- service: light.turn_off
+  entity_id:
+  - light.laundry_room_1
+  - light.laundry_room_2

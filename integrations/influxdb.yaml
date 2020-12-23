@@ -1,0 +1,6 @@
+---
+
+# influxdb:
+#   host: home-assistant-influxdb
+#   port: 8086
+#   max_retries: 5

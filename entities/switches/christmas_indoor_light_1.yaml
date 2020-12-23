@@ -1,0 +1,15 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/SP_224.html
+
+platform: "mqtt"
+name: "Christmas Indoor Light 1"
+
+state_topic: "zigbee2mqtt/Christmas Indoor Light 1"
+availability_topic: "zigbee2mqtt/bridge/state"
+payload_off: "OFF"
+payload_on: "ON"
+value_template: "{{ value_json.state }}"
+command_topic: "zigbee2mqtt/Christmas Indoor Light 1/set"
+
+unique_id: "SP224_0xbc33acfffe1667b3_zigbee2mqtt"

@@ -1,0 +1,14 @@
+---
+
+mqtt:
+  discovery: false
+  broker: vernemq
+  client_id: homeassistant
+  username: !env_var HASS_SECRET_MQTT_USERNAME
+  password: !env_var HASS_SECRET_MQTT_PASSWORD
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'

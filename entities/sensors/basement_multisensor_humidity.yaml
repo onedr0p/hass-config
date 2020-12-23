@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/WSDCGQ11LM.html
+
+platform: "mqtt"
+name: Basement Multi-Sensor - Humidity
+
+state_topic: "zigbee2mqtt/Basement Multi-Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "%"
+value_template: "{{ value_json.humidity }}"
+device_class: "humidity"
+
+unique_id: WSDCGQ11LM_0x00158d00054cb1d1_humidity_zigbee2mqtt

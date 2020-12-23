@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/WSDCGQ11LM.html
+
+platform: "mqtt"
+name: Basement Multi-Sensor - Temperature
+
+state_topic: "zigbee2mqtt/Basement Multi-Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "°C"
+value_template: "{{ value_json.temperature }}"
+device_class: "temperature"
+
+unique_id: WSDCGQ11LM_0x00158d00054cb1d1_temperature_zigbee2mqtt

@@ -1,0 +1,27 @@
+---
+
+alias: Turn on basement room light when there is movement
+trigger:
+- platform: state
+  entity_id: binary_sensor.basement_occupancy
+  to: 'on'
+- platform: state
+  entity_id: binary_sensor.basement_stairs_occupancy
+  to: 'on'
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.basement_occupancy
+      state: 'on'
+    - condition: state
+      entity_id: binary_sensor.basement_stairs_occupancy
+      state: 'on'
+action:
+- service: light.turn_on
+  entity_id:
+  - light.basement_ceiling_1
+  - light.basement_ceiling_2
+  - light.basement_ceiling_3
+  - light.basement_ceiling_4
+  - light.basement_ceiling_5

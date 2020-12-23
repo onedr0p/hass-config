@@ -1,0 +1,15 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/RTCGQ11LM.html
+
+platform: "mqtt"
+name: Study - Occupancy
+
+state_topic: "zigbee2mqtt/Study Motion Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+value_template: "{{ value_json.occupancy }}"
+payload_on: true
+payload_off: false
+device_class: "motion"
+
+unique_id: RTCGQ11LM_0x00158d0002753fcd_occupancy_zigbee2mqtt

@@ -1,0 +1,12 @@
+---
+
+alias: Turn on laundry room light when there is movement
+trigger:
+- platform: state
+  entity_id: binary_sensor.laundry_room_occupancy
+  to: 'on'
+action:
+- service: light.turn_on
+  entity_id:
+  - light.laundry_room_1
+  - light.laundry_room_2

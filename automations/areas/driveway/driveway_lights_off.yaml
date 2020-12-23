@@ -1,0 +1,11 @@
+---
+
+alias: Turn off Driveway lights at 10:00PM
+trigger:
+- platform: time
+  at: '22:00:00'
+action:
+- service: light.turn_off
+  entity_id:
+  - light.garage_door_1
+  - light.garage_door_2

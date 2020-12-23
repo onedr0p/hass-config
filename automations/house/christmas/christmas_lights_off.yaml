@@ -1,0 +1,14 @@
+---
+
+alias: Turn off Christmas lights 30 minutes before dawn
+trigger:
+- platform: sun
+  event: sunrise
+  offset: "-00:30:00"
+action:
+- service: switch.turn_off
+  entity_id:
+  - switch.christmas_indoor_light_1
+  - switch.christmas_indoor_light_2
+  - switch.christmas_porch_light
+  - switch.christmas_tree_light

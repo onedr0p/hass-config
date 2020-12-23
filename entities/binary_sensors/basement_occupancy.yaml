@@ -1,0 +1,15 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290012607.html
+
+platform: "mqtt"
+name: Basement - Occupancy
+
+state_topic: "zigbee2mqtt/Basement Motion Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+value_template: "{{ value_json.occupancy }}"
+payload_on: true
+payload_off: false
+device_class: "motion"
+
+unique_id: 9290012607_0x001788010211e828_occupancy_zigbee2mqtt

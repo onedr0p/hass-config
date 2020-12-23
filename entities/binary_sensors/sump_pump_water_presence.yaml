@@ -1,0 +1,17 @@
+---
+
+platform: "mqtt"
+name: Sump Pump - Water Presence
+
+state_topic: "zwave2mqtt/basement/sump-pump-water-sensor/113/1/5"
+device_class: "moisture"
+value_template: |
+  {%- if value_json.value == "Clear" -%}
+    false
+  {%- elif value_json.value == "Water Leak at Unknown Location" -%}
+    true
+  {%- else -%}
+    unknown
+  {%- endif -%}
+
+unique_id: ZW122_sump_pump_water_presence

@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/RTCGQ11LM.html
+
+platform: "mqtt"
+name: Dining Room - Lux
+
+state_topic: "zigbee2mqtt/Dining Room Motion Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "lx"
+value_template: "{{ value_json.illuminance }}"
+device_class: "illuminance"
+
+unique_id: RTCGQ11LM_0x00158d000279ae32_lux_zigbee2mqtt

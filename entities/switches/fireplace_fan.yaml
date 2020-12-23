@@ -1,0 +1,21 @@
+---
+
+platform: mqtt
+name: "Fireplace Fan"
+
+state_topic: "zwave2mqtt/living-room/fireplace-fan/37/1/0"
+command_topic: "zwave2mqtt/living-room/fireplace-fan/37/1/0/set"
+payload_on: "true"
+payload_off: "false"
+state_on: "true"
+state_off: "false"
+value_template: |
+  {%- if value_json.value == false -%}
+    false
+  {%- elif value_json.value == true -%}
+    true
+  {%- else -%}
+    unknown
+  {%- endif -%}
+
+unique_id: "0006_014a_fireplace_fan_zwave2mqtt"

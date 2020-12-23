@@ -1,0 +1,24 @@
+---
+
+platform: template
+sensors:
+  garage_door_status:
+    friendly_name: 'Garage Door Status'
+    value_template: |
+      {% if states.cover.car_garage_door %}
+        {% if states.cover.car_garage_door.attributes["door_state"] == "open" %}
+          Open
+        {% elif states.cover.car_garage_door.attributes["door_state"] == "closed" %}
+          Closed
+        {% elif states.cover.car_garage_door.attributes["door_state"] == "opening" %}
+          Opening
+        {% elif states.cover.car_garage_door.attributes["door_state"] == "closing" %}
+          Closing
+        {% elif states.cover.car_garage_door.attributes["door_state"] == "offline" %}
+          Offline
+        {% else %}
+          Unknown
+        {% endif %}
+      {% else %}
+        n/a
+      {% endif %}

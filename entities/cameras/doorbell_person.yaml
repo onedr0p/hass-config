@@ -1,0 +1,5 @@
+---
+
+name: Doorbell Last Person
+platform: mqtt
+topic: frigate/doorbell/person/snapshot

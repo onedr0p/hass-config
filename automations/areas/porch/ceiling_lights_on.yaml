@@ -1,0 +1,11 @@
+---
+
+alias: Turn on Porch Ceiling lights 10 minutes before dusk
+trigger:
+- platform: sun
+  event: sunset
+  offset: "-00:10:00"
+action:
+- service: light.turn_on
+  entity_id:
+  - light.porch

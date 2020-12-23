@@ -1,0 +1,12 @@
+---
+
+platform: "mqtt"
+name: Front Door - Lock State
+
+state_topic: "zwave2mqtt/foyer/front-door-lock/98/1/0"
+device_class: "lock"
+value_template: "{{ value_json.value }}"
+payload_on: false
+payload_off: true
+
+unique_id: "kwik916_front_door_locked_zwave2mqtt"

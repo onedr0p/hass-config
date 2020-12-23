@@ -1,0 +1,14 @@
+---
+
+platform: "mqtt"
+name: "Workbench Light"
+
+state_topic: "zwave2mqtt/basement/workbench-power/37/1/0"
+command_topic: "zwave2mqtt/basement/workbench-power/37/1/0/set"
+payload_on: "true"
+payload_off: "false"
+state_on: true
+state_off: false
+value_template: "{{ value_json.value }}"
+
+unique_id: 39449_zw4106_workbench

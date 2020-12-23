@@ -1,0 +1,10 @@
+---
+
+alias: Turn off Patio Door lights at 10:00PM
+trigger:
+- platform: time
+  at: '22:00:00'
+action:
+- service: light.turn_off
+  entity_id:
+  - light.patio_door

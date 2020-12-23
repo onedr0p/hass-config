@@ -1,0 +1,21 @@
+---
+
+platform: mqtt
+name: "Christmas Porch Light"
+
+state_topic: "zwave2mqtt/porch/christmas-light/37/1/0"
+command_topic: "zwave2mqtt/porch/christmas-light/37/1/0/set"
+payload_on: "true"
+payload_off: "false"
+state_on: "true"
+state_off: "false"
+value_template: |
+  {%- if value_json.value == false -%}
+    false
+  {%- elif value_json.value == true -%}
+    true
+  {%- else -%}
+    unknown
+  {%- endif -%}
+
+unique_id: "ff00_0312_christmas_porch_light_zwave2mqtt"

@@ -1,0 +1,7 @@
+---
+
+platform: flume
+username: !env_var HASS_SECRET_FLUME_USERNAME
+password: !env_var HASS_SECRET_FLUME_PASSWORD
+client_id: !env_var HASS_SECRET_FLUME_CLIENT_ID
+client_secret: !env_var HASS_SECRET_FLUME_CLIENT_SECRET

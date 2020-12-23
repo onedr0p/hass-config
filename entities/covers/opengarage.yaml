@@ -1,0 +1,8 @@
+---
+
+platform: opengarage
+covers:
+  garage:
+    host:  !env_var HASS_SECRET_OPENGARAGE_HOST
+    device_key: !env_var HASS_SECRET_OPENGARAGE_DEVICE_KEY
+    name: Car Garage Door

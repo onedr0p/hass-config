@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290012607.html
+
+platform: "mqtt"
+name: Master Bedroom Closet - Lux
+
+state_topic: "zigbee2mqtt/Master Bedroom Closet Motion Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "lx"
+value_template: "{{ value_json.illuminance_lux }}"
+device_class: "illuminance"
+
+unique_id: 9290012607_0x001788010211d519_lux_zigbee2mqtt

@@ -1,0 +1,7 @@
+---
+# The mqtt lock platform lets you control your MQTT enabled locks.
+#
+# https://www.home-assistant.io/integrations/lock.mqtt/
+#
+
+lock: !include_dir_list ../entities/locks

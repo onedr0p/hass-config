@@ -1,0 +1,26 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290012573A.html
+
+platform: "mqtt"
+name: "Living Room Back"
+
+state_topic: "zigbee2mqtt/Living Room Back Light"
+availability_topic: "zigbee2mqtt/bridge/state"
+brightness: true
+color_temp: true
+xy: true
+hs: false
+schema: "json"
+command_topic: "zigbee2mqtt/Living Room Back Light/set"
+brightness_scale: 254
+effect: true
+effect_list: 
+- "blink"
+- "breathe"
+- "okay"
+- "channel_change"
+- "finish_effect"
+- "stop_effect"
+
+unique_id: "9290012573A_0x0017880103844be7_zigbee2mqtt"

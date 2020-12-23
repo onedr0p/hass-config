@@ -1,0 +1,14 @@
+---
+
+# alias: 'Dehumidifier turns on for 6 hours every 12 hours'
+# trigger:
+# - platform: time_pattern
+#   hours: '/12'
+#   minutes: 0
+#   seconds: 0
+# action:
+# - service: switch.turn_on
+#   entity_id: switch.dehumidifier
+# - delay: '06:00:00'
+# - service: switch.turn_off
+#   entity_id: switch.dehumidifier

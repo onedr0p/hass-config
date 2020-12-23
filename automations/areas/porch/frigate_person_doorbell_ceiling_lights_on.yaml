@@ -1,0 +1,15 @@
+---
+
+alias: Turn on Porch lights when Person is detected after 10PM
+trigger: 
+  platform: state
+  entity_id: binary_sensor.doorbell_person
+  from: 'off'
+  to: 'on'
+condition:
+  condition: time
+  after: "22:00:00"
+action:
+- service: light.turn_on
+  entity_id:
+  - light.porch

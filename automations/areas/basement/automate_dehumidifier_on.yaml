@@ -1,0 +1,17 @@
+---
+
+# alias: Turn On Dehumidifier
+# description: ''
+# trigger:
+# - above: '70'
+#   entity_id: sensor.sonoff_am2301_humidity_2
+#   platform: numeric_state
+# condition:
+# - after: 07:00:00
+#   before: '22:00:00'
+#   condition: time
+# action:
+# - alias: ''
+#   data:
+#     entity_id: switch.sonoff_1000897089
+#   service: switch.turn_on

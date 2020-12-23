@@ -1,0 +1,22 @@
+# -----------------
+# General settings
+# -----------------
+# The configuration.yaml is only used to bootstrap the system
+# and contains some minimal, but vital, settings.
+
+homeassistant:
+  legacy_templates: false
+  name: Bahay
+  latitude: !env_var HASS_SECRET_LATITUDE 
+  longitude: !env_var HASS_SECRET_LONGITUDE 
+  elevation: !env_var HASS_SECRET_ELEVATION
+  unit_system: imperial
+  time_zone: America/New_York
+
+  external_url: "https://hass.devbu.io"
+  internal_url: "http://192.168.69.105:8123"
+
+  # Load packages
+  packages: !include_dir_named integrations
+
+  allowlist_external_dirs: !include whitelist_external_dirs.yaml

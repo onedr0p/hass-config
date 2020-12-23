@@ -1,0 +1,14 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290012607.html
+
+platform: "mqtt"
+name: Laundry Room - Temperature
+
+state_topic: "zigbee2mqtt/Laundry Room Motion Sensor"
+availability_topic: "zigbee2mqtt/bridge/state"
+unit_of_measurement: "°C"
+value_template: "{{ value_json.temperature }}"
+device_class: "temperature"
+
+unique_id: 9290012607_0x001788010211e6d9_temperature_zigbee2mqtt

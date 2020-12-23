@@ -1,0 +1,14 @@
+---
+
+alias: Turn off Garage lights when Person is not detected
+trigger: 
+  platform: state
+  entity_id: binary_sensor.garage_person
+  from: 'on'
+  to: 'off'
+  for:
+    minutes: 5
+action:
+- service: light.turn_off
+  entity_id:
+  - light.garage_ceiling

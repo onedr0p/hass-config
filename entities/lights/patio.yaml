@@ -1,0 +1,6 @@
+---
+
+platform: group
+name: Patio
+entities:
+- light.patio_door

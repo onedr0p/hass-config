@@ -1,0 +1,15 @@
+---
+
+# alias: Turn Off Dehumidifier
+# description: ''
+# trigger:
+# - below: '68'
+#   entity_id: sensor.sonoff_am2301_humidity_2
+#   platform: numeric_state
+# - at: '22:00:00'
+#   platform: time
+# condition: []
+# action:
+# - data:
+#     entity_id: switch.sonoff_1000897089
+#   service: switch.turn_off

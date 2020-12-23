@@ -1,0 +1,5 @@
+---
+
+name: Garage Last Person
+platform: mqtt
+topic: frigate/house-garage/person/snapshot

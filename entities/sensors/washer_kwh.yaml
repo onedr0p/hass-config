@@ -1,0 +1,10 @@
+---
+
+platform: "mqtt"
+name: Washer - kWh
+
+state_topic: "zwave2mqtt/laundry-room/washer-power/50/1/0"
+unit_of_measurement: "kWh"
+value_template: "{{ value_json.value }}"
+
+unique_id: zooz_zen15_washer_kwh

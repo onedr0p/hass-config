@@ -1,0 +1,12 @@
+---
+
+alias: Turn on Driveway lights 10 minutes before dusk
+trigger:
+- platform: sun
+  event: sunset
+  offset: "-00:10:00"
+action:
+- service: light.turn_on
+  entity_id:
+  - light.garage_door_1
+  - light.garage_door_2

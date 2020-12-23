@@ -1,0 +1,10 @@
+---
+
+platform: "mqtt"
+name: Sump Pump - Watts
+
+state_topic: "zwave2mqtt/basement/sump-pump-power/50/1/2"
+unit_of_measurement: "W"
+value_template: "{{ value_json.value }}"
+
+unique_id: zooz_zen15_sump_pump_watts

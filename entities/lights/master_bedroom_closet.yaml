@@ -1,0 +1,26 @@
+---
+
+# https://www.zigbee2mqtt.io/devices/9290011370B.html
+
+platform: mqtt
+name: "Master Bedroom Closet"
+
+state_topic: "zigbee2mqtt/Master Bedroom Closet Light"
+availability_topic: "zigbee2mqtt/bridge/state"
+brightness: true
+color_temp: false
+xy: false
+hs: false
+schema: "json"
+command_topic: "zigbee2mqtt/Master Bedroom Closet Light/set"
+brightness_scale: 254
+effect: true
+effect_list: 
+- "blink"
+- "breathe"
+- "okay"
+- "channel_change"
+- "finish_effect"
+- "stop_effect"
+
+unique_id: "9290011370_0x0017880103393203_zigbee2mqtt"
